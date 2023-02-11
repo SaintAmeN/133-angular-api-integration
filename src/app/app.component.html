@@ -1,1 +1,15 @@
-Hello!
+<div>
+  <button
+    class="form-control btn btn-primary"
+    (click)="wywolajZapytanie()"
+  >
+    Wywołaj zapytanie
+  </button>
+  <hr>
+  <textarea
+    class="form-control"
+    [(ngModel)]="this.odpowiedzSerwera"
+  >
+  </textarea>
+</div>
+<app-cat-facts-list></app-cat-facts-list>
