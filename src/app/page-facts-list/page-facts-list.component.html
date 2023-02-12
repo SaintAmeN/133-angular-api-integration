@@ -1,0 +1,42 @@
+<div class="container">
+  <mat-card>
+    <mat-card-content class="fact-list-form">
+      <mat-form-field class="no-padding w-100" appearance="fill">
+        <mat-label>Number of facts:</mat-label>
+        <input matInput #input type="number" step="1" placeholder="Number of facts:" [(ngModel)]="numberOfFacts">
+      </mat-form-field>
+      <button class="facts-form-button" mat-button mat-raised-button color="accent" (click)="getFacts()">
+        Get Cat Facts!
+      </button>
+    </mat-card-content>
+  </mat-card>
+
+
+  <mat-card>
+    <mat-card-content>
+      <table mat-table [dataSource]="factsList">
+        <ng-container matColumnDef="cat-fact-id">
+          <th mat-header-cell *matHeaderCellDef>Id</th>
+          <td mat-cell *matCellDef="let rekordTabeli">{{rekordTabeli._id}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cat-fact-text">
+          <th mat-header-cell *matHeaderCellDef>Fact</th>
+          <td mat-cell *matCellDef="let catFact">{{catFact.text}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cat-fact-details">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let catFact">
+            <button mat-button mat-raised-button color="warn">
+              Details
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+        <tr mat-row *matRowDef="let row; columns: columns"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

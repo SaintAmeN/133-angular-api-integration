@@ -1,0 +1,8 @@
+.jumbotron {
+  padding: 16px 16px 32px;
+  background-color: var(--cream-white);
+}
+
+.content-container {
+  background-color: var(--cream-white);
+}

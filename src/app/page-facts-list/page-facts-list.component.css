@@ -1,0 +1,15 @@
+.fact-list-form {
+  display: flex;
+  align-items: stretch;
+  vertical-align: center;
+}
+
+.facts-form-button {
+  min-width: 140px;
+  margin: 0 4px;
+  height: inherit;
+}
+
+.no-padding .mat-form-field-wrapper {
+  padding-bottom: 0 !important;
+}

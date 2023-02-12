@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CatFactsListComponent } from './cat-facts-list.component';
+import { PageFactsListComponent } from './page-facts-list.component';
 
-describe('CatFactsListComponent', () => {
-  let component: CatFactsListComponent;
-  let fixture: ComponentFixture<CatFactsListComponent>;
+describe('PageFactsListComponent', () => {
+  let component: PageFactsListComponent;
+  let fixture: ComponentFixture<PageFactsListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CatFactsListComponent ]
+      declarations: [ PageFactsListComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CatFactsListComponent);
+    fixture = TestBed.createComponent(PageFactsListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
