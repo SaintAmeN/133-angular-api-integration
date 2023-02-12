@@ -1,1 +1,49 @@
-<p>page-facts-single works!</p>
+<mat-card>
+  <mat-card-title>Cat fact: {{factDetails._id}}</mat-card-title>
+  <mat-card-subtitle>Fact: {{factDetails.text}}</mat-card-subtitle>
+  <mat-card-content>
+
+    <img class="m-5" src="{{factDetails.user.photo}}">
+
+    <mat-form-field class="w-25" appearance="outline">
+      <mat-label>User first name:</mat-label>
+      <input matInput #input placeholder="User first name:" [(ngModel)]="factDetails.user.name.first">
+    </mat-form-field>
+
+    <mat-form-field class="w-25" appearance="outline">
+      <mat-label>User last name:</mat-label>
+      <input matInput #input placeholder="User last name:" [(ngModel)]="factDetails.user.name.first">
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Identifier</mat-label>
+      <input matInput #input placeholder="Fact id" [(ngModel)]="factDetails._id">
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Created</mat-label>
+      <input matInput #input placeholder="Created:" [(ngModel)]="factDetails.createdAt">
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Updated</mat-label>
+      <input matInput #input placeholder="Updated:" [(ngModel)]="factDetails.updatedAt">
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Type</mat-label>
+      <input matInput #input placeholder="Type:" [(ngModel)]="factDetails.type">
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Status sent count:</mat-label>
+      <input matInput #input placeholder="Status sent count:" [(ngModel)]="factDetails.status.sentCount">
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Deleted</mat-label>
+      <input matInput #input placeholder="Deleted:" [(ngModel)]="factDetails.deleted">
+    </mat-form-field>
+
+  </mat-card-content>
+</mat-card>

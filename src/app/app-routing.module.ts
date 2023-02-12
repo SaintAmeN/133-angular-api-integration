@@ -8,7 +8,7 @@ import {PageFactsGeneratorComponent} from "./page-facts-generator/page-facts-gen
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "home", component: PageHomeComponent},
-  { path: "fact", component: PageFactsSingleComponent},
+  { path: "fact/:id", component: PageFactsSingleComponent},
   { path: "fact-list", component: PageFactsListComponent},
   { path: "fact-generator", component: PageFactsGeneratorComponent},
 ]
