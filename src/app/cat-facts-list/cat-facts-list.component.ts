@@ -21,16 +21,18 @@ export class CatFactsListComponent {
   }
 
   pobierzFakty() {
-    this.http.get<CatFact[]>(CATS_API_BASE_URL + CATS_API_ENDPOINT_FACTS_RANDOM,
-      {
-        params: {
-          amount: this.iloscFaktow
-        }
-      }).subscribe(
-      {
-        next: value => {
-          console.log("Pobrano fakty")
-          this.factsList = [...value]
+    // fire and forget // fire and subscribe
+    this.http.get<CatFact[]>(CATS_API_BASE_URL + CATS_API_ENDPOINT_FACTS_RANDOM, {
+      params: {
+        amount: this.iloscFaktow
+      }
+    }).subscribe({
+        next: dane => { // jeśli sukces, wywołaj ten blok kodu
+          console.log("Otrzymaliśmy odpowiedź z serwera.")
+          this.factsList = [...dane]
+        },
+        error: err => { // jeśli błąd, wywołaj ten blok kodu
+          console.log("Wystąpił błąd: " + err)
         }
       })
   }

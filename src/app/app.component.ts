@@ -14,12 +14,6 @@ export class AppComponent {
   constructor(private httpClient: HttpClient) {
   }
 
-  // odbierzWynik(wynik: CatFact): void {
-  //   this.odpowiedzSerwera = "cos innego"
-  //   // console.log("Wynik:")
-  //   // console.log(wynik)
-  // }
-
   wywolajZapytanie(): void {
     console.log('Hello my Frontend world!')
 
