@@ -1,1 +1,37 @@
-<p>page-facts-generator works!</p>
+<div class="container">
+  <mat-card>
+    <mat-card-title>Cat facts generator</mat-card-title>
+    <mat-card-content>
+      <button class="w-25 generate-button"
+      mat-button mat-raised-button
+      color="accent" (click)="generateFact('cat')">
+        Gimme cat fact!
+      </button>
+      <button class="w-25 generate-button"
+      mat-button mat-raised-button
+      color="accent" (click)="generateFact('horse')">
+        Gimme horse fact!
+      </button>
+      <button class="w-25 generate-button"
+      mat-button mat-raised-button
+      color="accent" (click)="generateFact('dog')">
+        Gimme dog fact!
+      </button>
+      <button class="w-25 generate-button"
+      mat-button mat-raised-button
+      color="accent" (click)="generateFact('cat,horse,dog')">
+        Gimme random fact!
+      </button>
+
+      <div class="container" *ngIf="generatedFact != null">
+        <div class="fact-content w-100">{{generatedFact?.type}}:</div>
+        <div class="fact-content w-100">{{generatedFact?.text}}</div>
+      </div>
+
+      <div class="container" *ngIf="generatedFact == null">
+        There is no fact generated, hit `gimme new fact!` to get one!
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>
